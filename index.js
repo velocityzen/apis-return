@@ -1,7 +1,7 @@
 'use strict';
-var errors = require('apis').errors;
+var errors = require('apis/lib/errors');
 
-var returnHandler = function(NoResultError, retName, cb) {
+errors.handler = function(NoResultError, retName, cb) {
 	if(typeof NoResultError === "string") {
 		NoResultError = errors[NoResultError];
 	}
@@ -30,4 +30,4 @@ var returnHandler = function(NoResultError, retName, cb) {
 	};
 };
 
-module.exports = returnHandler;
+module.exports = errors;
