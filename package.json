@@ -1,7 +1,7 @@
 {
 	"name": "apis-return",
 	"description": "Return value apis helper",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"keywords": ["future", "web", "apis", "unionapi"],
 	"author": "Alexey Novikov <v@2dubs.com> (http://2dubs.com)",
 	"preferGlobal": false,
