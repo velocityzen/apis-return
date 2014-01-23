@@ -1,5 +1,12 @@
 'use strict';
 var errors = require('apis/lib/errors');
+var isEmpty = function(something) {
+	if(!something) {
+		return true;
+	}
+
+	return !Object.keys(something).length;
+};
 
 errors.handler = function(NoResultError, retName, cb) {
 	if(typeof NoResultError === "string") {
@@ -14,7 +21,7 @@ errors.handler = function(NoResultError, retName, cb) {
 	return function(err, result) {
 		if(err) {
 			cb(err);
-		} else if(!result && NoResultError) {
+		} else if(isEmpty(result) && NoResultError) {
 			cb(new NoResultError());
 		} else if(retName === undefined) {
 			cb(null, result);
