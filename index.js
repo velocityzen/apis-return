@@ -5,7 +5,7 @@ var isEmpty = function(something) {
 		return true;
 	}
 
-	return !Object.keys(something).length;
+	return typeof something === "object" && !Object.keys(something).length;
 };
 
 errors.handler = function(NoResultError, retName, cb) {
