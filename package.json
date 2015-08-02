@@ -1,16 +1,11 @@
 {
 	"name": "apis-return",
 	"description": "Return value apis helper",
-	"version": "0.0.3",
+	"version": "0.1.0",
 	"keywords": ["future", "web", "apis", "unionapi"],
 	"author": "Alexey Novikov <v@2dubs.com> (http://2dubs.com)",
-	"preferGlobal": false,
-	"private": false,
 	"dependencies": {
-		"apis": 	"~0.0.2"
-	},
-	"engines": {
-		"node": "~0.10.15"
+		"apis": 	"~0.1.0"
 	},
 	"repository": {
 		"type": "git",
