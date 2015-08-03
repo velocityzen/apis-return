@@ -1,5 +1,5 @@
-'use strict';
-var errors = require('apis/lib/errors');
+"use strict";
+var errors = require("apis/lib/errors");
 var isEmpty = function(something) {
 	if(!something) {
 		return true;
@@ -13,7 +13,7 @@ errors.handler = function(NoResultError, retName, cb) {
 		NoResultError = errors[NoResultError];
 	}
 
-	if(typeof retName === 'function') {
+	if(typeof retName === "function") {
 		cb = retName;
 		retName = undefined;
 	}
@@ -27,7 +27,7 @@ errors.handler = function(NoResultError, retName, cb) {
 			cb(null, result);
 		} else {
 			var ret = {};
-			if(typeof retName === 'string') {
+			if(typeof retName === "string") {
 				ret[retName] = result;
 			} else {
 				ret = retName;
