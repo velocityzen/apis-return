@@ -10,7 +10,7 @@ var returnHandler = require('apis-return');
 //Some resource class here
 Resource.prototype.get = function(id, cb) {
     db.get(id, returnHandler("NotFound", cb)); 
-    //this will return standard 404 NotFound if db return non result
+    //this will return standard 404 NotFound if error or db returns non result
 }
 ```
 
@@ -19,7 +19,7 @@ returnHandler(error, name, cb);
 returnHandler(error, cb);
 ```
 
-*   **error** — can be standard http error name in camel case notation. Or error class. For custom error classes implementations look in apis lib documentation;
+*   **error** — can be standard http error name in camel case notation or error class. For custom error classes implementation look in the apis lib documentation;
 *   **name** — return value name or return object. If name is string it will return {name: result}. If name is object, it will return this object. If no name provided return result;
 *   **cb** — callback
 

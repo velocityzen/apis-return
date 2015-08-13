@@ -8,9 +8,9 @@ var isEmpty = function(something) {
 	return typeof something === "object" && !Object.keys(something).length;
 };
 
-errors.handler = function(NoResultError, retName, cb) {
-	if(typeof NoResultError === "string") {
-		NoResultError = errors[NoResultError];
+errors.handler = function(ErrorClass, retName, cb) {
+	if(typeof ErrorClass === "string") {
+		ErrorClass = errors[ErrorClass];
 	}
 
 	if(typeof retName === "function") {
@@ -20,9 +20,9 @@ errors.handler = function(NoResultError, retName, cb) {
 
 	return function(err, result) {
 		if(err) {
-			cb(err);
-		} else if(isEmpty(result) && NoResultError) {
-			cb(new NoResultError());
+			cb(new ErrorClass(err.message));
+		} else if(isEmpty(result) && ErrorClass) {
+			cb(new ErrorClass());
 		} else if(retName === undefined) {
 			cb(null, result);
 		} else {
