@@ -1,15 +1,20 @@
 {
-	"name": "apis-return",
-	"description": "Return value apis helper",
-	"version": "0.1.0",
-	"keywords": ["future", "web", "apis", "unionapi"],
-	"author": "Alexey Novikov <v@2dubs.com> (http://2dubs.com)",
-	"dependencies": {
-		"apis": 	"~0.1.0"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git@github.com:velocityzen/apis-return.git"
-	},
-	"main": "./index"
+  "name": "apis-return",
+  "description": "Return value apis helper",
+  "version": "0.2.0",
+  "keywords": [
+    "future",
+    "web",
+    "apis",
+    "unionapi"
+  ],
+  "author": "Alexey Novikov <v@2dubs.com> (http://2dubs.com)",
+  "dependencies": {
+    "apis": "~0.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:velocityzen/apis-return.git"
+  },
+  "main": "./index"
 }
