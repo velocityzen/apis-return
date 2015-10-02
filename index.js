@@ -29,7 +29,7 @@ errors.handler = function(ErrorClass, retName, cb) {
         ret = retName;
       }
       cb(null, ret);
-    } if (isEmpty(result) && ErrorClass) {
+    } else if (isEmpty(result) && ErrorClass) {
       cb(new ErrorClass());
     } else {
       cb(null, result);
